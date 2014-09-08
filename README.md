@@ -1,4 +1,4 @@
-A minimal experiment to show off how to use Google App Engine for psychology experiments
+A demo experiment to show off how to use HTML canvas and Google App Engine for psychology experiments
 ==================
 
 ### Required tools:
