@@ -6,36 +6,29 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <title>Minimal Experiment for use with Google App Engine</title>
+    <title>Experiment using HTML Canvas and Google App Engine</title>
 
   </head>
   <body>
     
-    <div id="message">Please select the best answer to each question:</div>
-    
+    <div id="message">Is this item more red or blue?</div>
+
     <br>
     
-    <div id="experiment">
-      <form>
-        <label for="question1">Question 1:</label><br>
-        <input type="radio" name="question1" value="correct"> Correct <br>
-        <input type="radio" name="question1" value="incorrect"> Incorrect<br><br>
-
-        <label for="question2">Question 2:</label><br>
-        <input type="radio" name="question2" value="correct"> Correct <br>
-        <input type="radio" name="question2" value="incorrect"> Incorrect<br><br>
-
-        <label for="question3">Question 3:</label><br>
-        <input type="radio" name="question3" value="correct"> Correct <br>
-        <input type="radio" name="question3" value="incorrect"> Incorrect<br>
-      </form>
-      
-      <br>
-
-      <input type="button" value="Done" id="done" onclick="finishExperiment()">
-
+    <div id="canvasWrapper">
+      <canvas id="stimulus" width="200" height="200" style="border:1px solid #000000;">
+        Uh oh! Your browser doesn't support the html canvas element. 
+        Please try using a different internet browser.
+      </canvas>
     </div>
 
+    <br>
+
+    <div id="buttons" hidden>
+      <input type="button" value="Red" id="red" onclick="recordResponse('red')">
+      <input type="button" value="Blue" id="blue" onclick="recordResponse('blue')">
+    </div>
+    
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="js/exp.js" type="text/javascript"></script>
     
