@@ -114,18 +114,14 @@ function drawRedBluePattern() {
 
 function finishExperiment() {
   /*
-  * function called when the subject clicks Done
+  * function called when the subject has done all trials
   *
-  * This function reads the responses the subject gives
-  * and passes those responses to the function saveData
-  * 
-  * This function then hides the experiment and displays a "Thank you" message
+  * This function hides the experiment and displays a "Thank you" message
   */
   
-  var responses = $('form').serializeArray();
-  saveData(responses);
+  $('#canvasWrapper').hide();
+  $('#buttons').hide();
   
-  $('#experiment').hide();
   $('#message').text("Thank you for completing the experiment!");
 }
 
