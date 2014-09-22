@@ -47,8 +47,11 @@ A demo experiment to show off how to use HTML canvas and Google App Engine for p
 2. Edit app.yaml to have a new version number (usually by adding one)
 3. In Google App Engine, click Deploy
 4. open the appengine.google.com webpage for your experiment and click Dashboard
-5. On the dashboard, click Versions (under Main in the left bar)
+5. On the dashboard, click Versions (under Main in the
+ left bar)
 6. Set your new version as Default
+
+Note: If you upload a new version of your experiment, it will still share the same datastore as your previous experiments. To remove the existing data in the datastore, either create a new experiment (with a different application identifier) or delete all data in the datastore.
 
 ### How to check on the data once deployed to the web
 
